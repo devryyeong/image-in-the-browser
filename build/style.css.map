@@ -1,0 +1,1 @@
+{"version":3,"file":"style.css","mappings":"AAAA,GACE,UACF","sources":["webpack://image-in-the-browser/./src/css/index.css"],"sourcesContent":["h1 {\n  color: grey;\n}\n"],"names":[],"sourceRoot":""}

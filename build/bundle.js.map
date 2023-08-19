@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"mBAEYA,SAASC,cAAc,MAE/BC,UAAY,wB","sources":["webpack://image-in-the-browser/./src/index.js"],"sourcesContent":["import './css/index.css';\n\nconst $h1 = document.querySelector('h1');\n\n$h1.innerText = 'Vanilla JS boilerplate';\n"],"names":["document","querySelector","innerText"],"sourceRoot":""}
