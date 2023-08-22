@@ -1,6 +1,9 @@
 import COLORS from "./colors";
 
-const drawBear = (canvas, context, x, y) => {
+const drawBear = (x, y) => {
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+
   // 얼굴 그리기
   context.beginPath();
   context.arc(x + 150, y + 150, 50, 0, Math.PI * 2);

@@ -1,4 +1,7 @@
-const drawHeart = (canvas, context, x, y) => {
+const drawHeart = (x, y) => {
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+
   context.save(); // 현재 상태 저장
   context.translate(x, y); // 원점 이동
 
