@@ -17,13 +17,18 @@ function getRandomColor() {
 
 // 랜덤 도형 추가 함수
 function addRandomShape(x, y) {
-  const shapeType = Math.random() < 0.5 ? 'circle' : 'heart';
-  const shapeColor = getRandomColor();
+  const shapeTypes = ['circle', 'heart', 'bear'];
+  const randomShapeIndex = Math.floor(Math.random() * shapeTypes.length);
+
+  const shapeType = shapeTypes[randomShapeIndex]
+  const shapeColor = shapeType === 'bear' ? `${COLORS.BROWN}` : getRandomColor();
 
   if (shapeType === 'circle') {
     drawCircle(x, y);
   } else if (shapeType === 'heart') {
     drawHeart(x, y);
+  } else if (shapeType === 'bear') {
+    drawBear(x, y);
   }
 
   context.fillStyle = shapeColor;
