@@ -20,15 +20,15 @@ function addRandomShape(x, y) {
   const shapeTypes = ['circle', 'heart', 'bear'];
   const randomShapeIndex = Math.floor(Math.random() * shapeTypes.length);
 
-  const shapeType = shapeTypes[randomShapeIndex]
+  const shapeType = shapeTypes[randomShapeIndex];
   const shapeColor = shapeType === 'bear' ? `${COLORS.BROWN}` : getRandomColor();
 
   if (shapeType === 'circle') {
-    drawCircle(x, y);
+    drawCircle(canvas, context, x, y);
   } else if (shapeType === 'heart') {
-    drawHeart(x, y);
+    drawHeart(canvas, context, x, y);
   } else if (shapeType === 'bear') {
-    drawBear(x, y);
+    drawBear(canvas, context, x, y);
   }
 
   context.fillStyle = shapeColor;
