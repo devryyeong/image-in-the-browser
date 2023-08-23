@@ -1,21 +1,21 @@
+import { HOUSE_CENTER } from "./utils/constant";
+
 const drawCircle = (x, y) => {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
+
+  const centerX = x;
+  const centerY = y + 50;
 
   context.beginPath();
   context.arc(x, y, 50, 0, Math.PI * 2);
   context.fill();
   context.closePath();
 
-  // 하단 중앙에서 선 그리기
-  const centerX = x;
-  const centerY = y + 50;
-  const endX = canvas.width / 2;
-  const endY = canvas.height - 150;
-
+  // 끈
   context.beginPath();
   context.moveTo(centerX, centerY);
-  context.lineTo(endX, endY);
+  context.lineTo(HOUSE_CENTER.x, HOUSE_CENTER.y);
   context.strokeStyle = 'black';
   context.stroke();
   context.closePath();

@@ -1,17 +1,21 @@
-import COLORS from "./colors";
+import COLORS from './utils/colors';
+import { HOUSE_CENTER } from './utils/constant';
 
 const drawBear = (x, y) => {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
 
-  // 얼굴 그리기
+  const centerX = x + 150;
+  const centerY = y + 200;
+
+  // 얼굴
   context.beginPath();
   context.arc(x + 150, y + 150, 50, 0, Math.PI * 2);
   context.fillStyle = `${COLORS.BROWN}`;
   context.fill();
   context.closePath();
 
-  // 눈 그리기
+  // 눈
   context.beginPath();
   context.arc(x + 130, y + 130, 5, 0, Math.PI * 2);
   context.fillStyle = '#000000';
@@ -24,14 +28,14 @@ const drawBear = (x, y) => {
   context.fill();
   context.closePath();
 
-  // 코 그리기
+  // 코
   context.beginPath();
   context.arc(x + 150, y + 150, 5, 0, Math.PI * 2);
   context.fillStyle = '#000000';
   context.fill();
   context.closePath();
 
-  // 입 그리기
+  // 입
   context.beginPath();
   context.arc(x + 150, y + 155, 20, 0.2 * Math.PI, 0.8 * Math.PI);
   context.strokeStyle = '#000000';
@@ -39,15 +43,10 @@ const drawBear = (x, y) => {
   context.stroke();
   context.closePath();
 
-  // 하단 중앙에서 선 그리기
-  const centerX = x + 150;
-  const centerY = y + 200;
-  const endX = canvas.width / 2;
-  const endY = canvas.height - 150;
-
+  // 끈
   context.beginPath();
   context.moveTo(centerX, centerY);
-  context.lineTo(endX, endY);
+  context.lineTo(HOUSE_CENTER.x, HOUSE_CENTER.y);
   context.strokeStyle = 'black';
   context.stroke();
   context.closePath();

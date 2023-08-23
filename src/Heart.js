@@ -1,6 +1,11 @@
+import { HOUSE_CENTER } from './utils/constant';
+
 const drawHeart = (x, y) => {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
+
+  const centerX = x + 75;
+  const centerY = y + 120;
 
   context.save(); // 현재 상태 저장
   context.translate(x, y); // 원점 이동
@@ -15,19 +20,13 @@ const drawHeart = (x, y) => {
   context.bezierCurveTo(85, 25, 75, 37, 75, 40);
   context.fill();
   context.closePath();
-
   context.restore(); // 상태 복원
 
-  // 하단 중앙에서 선 그리기
-  const centerX = x + 75;
-  const centerY = y + 120;
-  const endX = canvas.width / 2;
-  const endY = canvas.height - 150;
-
+  // 끈
   context.beginPath();
   context.moveTo(centerX, centerY);
-  context.lineTo(endX, endY);
-  context.strokeStyle = 'black';
+  context.lineTo(HOUSE_CENTER.x, HOUSE_CENTER.y);
+  context.strokeStyle = '#000000';
   context.stroke();
   context.closePath();
 };
