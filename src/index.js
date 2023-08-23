@@ -182,3 +182,50 @@ canvas.addEventListener('click', (event) => {
   }
 });
 drawHouse(context, canvas.width / 2 - HOUSE_WIDTH / 2, canvas.height - HOUSE_HEIGHT);
+
+
+// 구름 그리기 함수
+// function drawCloud(x, y, width, height) {
+//   context.beginPath();
+//   context.arc(x + width * 0.25, y + height * 0.5, width * 0.25, 0, Math.PI * 2);
+//   context.arc(x + width * 0.5, y + height * 0.4, width * 0.3, 0, Math.PI * 2);
+//   context.arc(x + width * 0.75, y + height * 0.5, width * 0.25, 0, Math.PI * 2);
+//   context.closePath();
+
+//   context.fillStyle = 'white';
+//   context.fill();
+// }
+
+// // 구름 초기 좌표와 속도 설정
+// let cloudX = canvas.width - 200;
+// const cloudY = canvas.height - 550;
+// const cloudWidth = 150;
+// const cloudHeight = 80;
+// const cloudSpeed = 2;
+
+
+// // 캔버스 다시 그리기 함수
+// function redrawCanvasWithAnimation() {
+//   context.clearRect(0, 0, canvas.width, canvas.height);
+//   // 집 그리기
+//   drawHouse(context, 620, 450);
+//   // 구름 그리기
+//   drawCloud(cloudX, cloudY, cloudWidth, cloudHeight);
+// }
+// // 구름 움직임 로직
+// function updateCloudPosition() {
+//   cloudX -= cloudSpeed;
+//   if (cloudX + cloudWidth < 0) {
+//     cloudX = canvas.width;
+//   }
+// }
+
+// // 애니메이션 설정
+// function animate() {
+//   updateCloudPosition();
+//   redrawCanvasWithAnimation();
+
+//   // 다음 프레임 요청
+//   requestAnimationFrame(animate);
+// }
+// animate();
