@@ -36,3 +36,10 @@ $ yarn dev
 <br>
 
 ## 📎 배포 주소 및 기능 설명
+---
+|**풍선 추가**|**풍선 삭제**|**구름 애니메이션**|
+|---|---|---|
+|![addBalloon](https://github.com/devryyeong/image-in-the-browser/assets/68095767/98b84ac5-c7c5-4529-b1e0-f81a741c69d9)|![removeBalloon](https://github.com/devryyeong/image-in-the-browser/assets/68095767/f39e8be9-c6d1-45db-99fc-e577b7e17c46)|![cloud animation](https://github.com/devryyeong/image-in-the-browser/assets/68095767/2165eeb9-cb09-408a-9888-167a19af30e7)|
+|가운데에 있는 집 클릭시 랜덤 모양과 색의 풍선 추가|각각의 풍선 클릭시 삭제|구름이 상단에 수평으로 움직이는 애니메이션|
+
+
