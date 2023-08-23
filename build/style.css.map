@@ -1,1 +1,1 @@
-{"version":3,"file":"style.css","mappings":"AAAA,GACE,UACF","sources":["webpack://image-in-the-browser/./src/css/index.css"],"sourcesContent":["h1 {\n  color: grey;\n}\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"style.css","mappings":"AAAA;EACE,kDAAkD;AACpD","sources":["webpack://image-in-the-browser/./src/css/index.css"],"sourcesContent":["#canvas {\n  background-image:linear-gradient(#39ECFF, #2ABBFC);\n}\n"],"names":[],"sourceRoot":""}
