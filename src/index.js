@@ -152,8 +152,6 @@ function handleShapeClick(clickX, clickY) {
   redrawCanvas();
 }
 
-drawHouse(context, canvas.width / 2 - HOUSE_WIDTH / 2, canvas.height - HOUSE_HEIGHT);
-
 // 특정값 사이의 랜덤 좌표 생성 함수
 function getRandomPointInRange(minX, maxX, minY, maxY) {
   const randomX = Math.random() * (maxX - minX) + minX;
@@ -183,3 +181,4 @@ canvas.addEventListener('click', (event) => {
     addRandomShape(randomPoint.x, randomPoint.y);
   }
 });
+drawHouse(context, canvas.width / 2 - HOUSE_WIDTH / 2, canvas.height - HOUSE_HEIGHT);

@@ -1,6 +1,6 @@
 import { HOUSE_CENTER } from './utils/constant';
 
-const drawHeart = (x, y) => {
+function drawHeart (x, y) {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
 

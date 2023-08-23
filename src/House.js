@@ -1,24 +1,32 @@
-const drawHouse = (context, x, y) => {
-  context.beginPath();
-  context.rect(x, y, 200, 150);
-  context.fillStyle = '#d3d3d3';
-  context.fill();
-  context.closePath();
+import { HOUSE_WIDTH, HOUSE_HEIGHT } from './utils/constant';
 
-  // 문
-  context.beginPath();
-  context.rect(x + 70, y + 50, 60, 100);
-  context.fillStyle = '#5e3811';
-  context.fill();
-  context.closePath();
+function drawWindow (context, x, y) {
+  context.fillStyle = '#FFFF00';
+  context.fillRect(x + 10, y + 10, 30, 30);
+}
 
-  // 창문
+function drawHouse (context, x, y) {
   context.beginPath();
-  context.rect(x + 20, y + 20, 50, 50);
-  context.rect(x + 130, y + 20, 50, 50);
-  context.fillStyle = '#2e5a9a';
-  context.fill();
-  context.closePath();
+  context.fillStyle = '#3C3C3C';
+  context.fillRect(x, y, HOUSE_WIDTH, HOUSE_HEIGHT);
+
+  // 창문 그리기
+  const windowWidth = 20;
+  const windowHeight = 20;
+  const windowPadding = 20;
+
+  // 1행에 3개의 창문 그리기
+  for (let i = 0; i < 3; i++) {
+    const windowX = x + windowPadding + i * ((200 - windowWidth) / 5 + windowPadding);
+    const windowY = y + windowPadding;
+    drawWindow(context, windowX, windowY);
+  }
+
+  for (let i = 0; i < 3; i++) {
+    const windowX = x + windowPadding + i * ((200 - windowWidth) / 5 + windowPadding);
+    const windowY = y + windowPadding;
+    drawWindow(context, windowX, windowY + windowHeight + windowPadding);
+  }
 };
 
 export default drawHouse;

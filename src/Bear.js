@@ -1,7 +1,7 @@
 import COLORS from './utils/colors';
 import { HOUSE_CENTER } from './utils/constant';
 
-const drawBear = (x, y) => {
+function drawBear (x, y) {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
 
